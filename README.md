@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ottanwa Commerce
+
+A production-quality, reusable ecommerce storefront template built with Next.js 15 App Router, TypeScript, and Tailwind CSS.
+
+This is the master template for Ottanwa Commerce — a fictional US-based towel and home linens retailer. Duplicate this repository and swap brand assets, colors, and data to launch new stores without rewriting components.
+
+## Tech Stack
+
+- **Next.js 15** (App Router)
+- **TypeScript**
+- **Tailwind CSS v4**
+- **shadcn/ui** (Radix primitives)
+- **Lucide Icons**
+- **Framer Motion** (subtle animations)
+- **Embla Carousel**
+- **React Context** (cart, wishlist, recently viewed)
+- **localStorage** persistence (no backend)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build   # Production build
+npm run start   # Start production server
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Customizing for a New Store
 
-## Learn More
+To rebrand this template for a new store, edit **only** these files:
 
-To learn more about Next.js, take a look at the following resources:
+| What to change | Where |
+|---|---|
+| Company name, contact, social | `data/company.ts` |
+| Brand colors | `styles/theme.ts` + `app/globals.css` |
+| Navigation & footer links | `data/navigation.ts` |
+| Categories | `data/categories.ts` |
+| Products | `data/products.ts` |
+| Homepage content | `data/homepage.ts` |
+| Testimonials | `data/testimonials.ts` |
+| Logo | `public/logo/` |
+| Hero images | `public/hero/` |
+| Banners | `public/banners/` |
+| Category images | `public/categories/` |
+| Product images | `public/products/` |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Regenerate placeholder SVGs after changing products:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+node scripts/generate-images.mjs
+```
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+app/                  # Next.js pages (App Router)
+components/
+  navbar/             # Sticky navigation with search
+  footer/             # Four-column footer
+  homepage/           # Homepage sections
+  product/            # Product cards, gallery, quick view
+  cart/               # Cart page
+  checkout/           # Demo checkout
+  shop/               # Shop with filters
+  ui/                 # Reusable UI primitives
+data/                 # All store content (JSON-like TS files)
+lib/                  # Utilities and constants
+hooks/                # Custom React hooks
+context/              # Cart, wishlist, recently viewed
+public/               # Static assets
+styles/               # Theme color tokens
+types/                # TypeScript interfaces
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Features
+
+- Full homepage with 12 sections (hero, categories, deals, best sellers, etc.)
+- Working cart with add/remove/quantity and localStorage persistence
+- Working wishlist with localStorage persistence
+- Live search filtering in navbar and shop page
+- Quick view modal on product cards
+- Product detail page with gallery, accordion, related products
+- Shop page with sidebar filters, sorting, and pagination
+- Demo checkout (no payment processing)
+- Fully responsive (mobile, tablet, desktop)
+- 26 products across 6 categories
+
+## Demo Checkout
+
+The checkout page displays **"Demo Checkout"** — no payment is processed. Use coupon code `SAVE10` on the cart page for a 10% discount demo.
+
+## Brand Colors
+
+- **Primary:** Deep Green `#1B4332`
+- **Accent:** Gold `#C9A227`

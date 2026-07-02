@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="48" viewBox="0 0 180 48">
+  <rect width="180" height="48" fill="transparent"/>
+  <circle cx="24" cy="24" r="18" fill="#1B4332"/>
+  <text x="24" y="24" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-family="Georgia, serif" font-size="16" font-weight="700">O</text>
+  <text x="52" y="20" fill="#1B4332" font-family="Georgia, serif" font-size="14" font-weight="700">Ottanwa</text>
+  <text x="52" y="36" fill="#C9A227" font-family="system-ui, sans-serif" font-size="10" letter-spacing="2">COMMERCE</text>
+</svg>
