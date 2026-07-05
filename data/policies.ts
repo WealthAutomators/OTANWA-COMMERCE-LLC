@@ -49,7 +49,7 @@ export const faqItems = [
   {
     question: "What payment methods do you accept?",
     answer:
-      "We accept Visa, Mastercard, American Express, PayPal, and Apple Pay. All transactions are encrypted and processed securely. Note: our checkout is currently in demo mode and does not process real payments.",
+      "We accept Visa, Mastercard, American Express, PayPal, and Apple Pay. All transactions are encrypted and processed securely.",
   },
 ];
 
@@ -221,7 +221,7 @@ export const termsPolicy = {
     {
       title: "Orders & Payment",
       content:
-        "Placing an order constitutes an offer to purchase. We reserve the right to refuse or cancel any order. Payment must be received before orders are processed. Note: this website operates in demo mode and does not process real payments.",
+        "Placing an order constitutes an offer to purchase. We reserve the right to refuse or cancel any order. Payment must be received before orders are processed.",
     },
     {
       title: "Intellectual Property",

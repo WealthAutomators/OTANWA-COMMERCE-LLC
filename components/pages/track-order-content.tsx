@@ -91,9 +91,6 @@ export function TrackOrderContent() {
               <Search className="h-4 w-4" />
               Track Order
             </Button>
-            <p className="mt-4 text-center text-xs text-muted-foreground">
-              Demo orders: OC-100234, OC-100567, OC-100891
-            </p>
           </form>
 
           {searched && notFound && (
